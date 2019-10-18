@@ -10,7 +10,7 @@ node {
     stage ('Run UAT') {
         //docker.image('scrumtrek/ui-server:latest').withRun('--name ui-service -p 8689:8080') { c ->
             //withMaven(maven: 'local_mvn') {
-            withEnv(["WEBDRIVER_PATH=/opt/chromedriver"]) {
+            withEnv(["WEBDRIVER_PATH=/opt/chromedriver/chromedriver"]) {
                         sh 'mvn clean install -P local'
                         }
             //}
