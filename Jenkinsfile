@@ -9,6 +9,7 @@ node {
                         sh 'mvn clean install -P local'
             }
         }
+    }
 
     stage ('Test') {
         junit allowEmptyResults: true, testResults:'target/surefire-reports/*.xml'
